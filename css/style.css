@@ -123,7 +123,7 @@ h1{
     display: block;
     margin: 0;
     position: fixed;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -161,33 +161,70 @@ h1{
     margin: auto;
 }
 
+.info-section{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.info-card{
+    color: white;
+    border: solid 2px white;
+    padding: 15px;
+}
+
+.modal-content{
+    color: white;
+    border: 3px white solid;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+    padding: 15px;
+}
+
+.modal{
+    margin-top: 20px;
+}
+
+
+
 .timeline {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
-    position: relative;
-    border: 2px solid white;
-    padding: 15px;
-
 }
 
 .timeline::before {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: white;
+    background-color: #8d8d8d;
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -3px;
-    opacity: 50%;
 }
 
 .event {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
-    border: 2px dotted white;
-    width: 80%;
+    cursor: pointer;
+    
+}
+
+.event > p {
+    width: 45%;
+    border: solid 2px white;
+    padding: 7px;
+    text-align: center;
+}
+
+.event > p, .event > h3{
+    color: white;
+    
 }
 
 .event::before {
@@ -204,7 +241,13 @@ h1{
     border-color: white transparent transparent transparent;
 }
 
+.event p {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 
-.event > h3, .event > p{
-    color: white;
+.event:hover p {
+    visibility: visible;
+    opacity: 1;
 }
