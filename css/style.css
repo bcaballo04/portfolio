@@ -32,6 +32,14 @@ header{
     margin: 30px;
 }
 
+.skip{
+    position: absolute;
+    top: -40px;
+}
+
+.skip:focus{
+    top: 0;
+}
 
 #mich{
     width: 60vh;
@@ -116,7 +124,7 @@ h1{
     padding: 10px;
 }
 
-#hssp, #apa, #ycci {
+#hssp, #apa, #ycci{
     width: 800px;
     height: auto;
     display: block;
@@ -127,6 +135,7 @@ h1{
     transform: translate(-50%, -50%);
     z-index: 1;
 }
+
 
 #links{
     margin-top:50px;

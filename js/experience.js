@@ -21,3 +21,17 @@ document.getElementById('hsspLink').addEventListener('mouseover', function() {
   document.getElementById('apaLink').addEventListener('mouseout', function() {
     document.getElementById('apa').style.display = 'none';
   });
+
+
+  window.addEventListener('scroll', function() {
+
+    let ycci = document.querySelector('#ycci');
+    let scrollPosition = window.scrollY;
+    let documentHeight = document.documentElement.scrollHeight;
+
+    if (scrollPosition > documentHeight / 3.5) {
+        ycci.style.top = '80%';
+    } else {
+        ycci.style.top = (15 + scrollPosition * 0.05) + '%';
+    }
+});
