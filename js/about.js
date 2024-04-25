@@ -4,7 +4,8 @@ let modalContent = document.querySelector('.modal-content');
 
 
 cards.forEach(function(card) {
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function(event) {
+
         let category = card.getAttribute('id');
         let content = ''; 
 
